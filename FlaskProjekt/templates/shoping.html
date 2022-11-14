@@ -1,0 +1,12 @@
+{% extends "layouts/main.html" %}
+{% block content %}
+<h3>Einkaufwagen für {{person[1]}}, {{person[0]}}</h3>
+{% if items !=None %}
+<ul>
+    {%for item in items%}
+    <li>Artikel: {{item.name}} &ensp; Anzahl: {{item.amount}} mal</li>
+   {% endfor %}
+
+    </ul>
+{% endif %}
+{% endblock %}
